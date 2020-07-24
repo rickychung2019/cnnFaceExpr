@@ -9,7 +9,7 @@ Unfortunately, the pixels of each image given by the dataset are just a series o
 Step2: Defining Training Set and Validation Set<br />
 The Facial Expression Recognition Challenge did not provide validation set. Thus, I will split icml_face_data.csv into training set and validation set. Ratio=3:1.
 
-Step3: Choosing Models<br />
+Step3: Defining Models<br />
 Self-defined
 VGG16
 VGG19
