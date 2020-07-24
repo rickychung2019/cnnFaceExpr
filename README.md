@@ -17,3 +17,14 @@ ResNet50
 ResNet101
 
 Step4: Training<br />
+After 100th epochs:<br />
+Self-defined:<br />
+loss:  - accuracy:  - val_loss:  - val_accuracy: 
+VGG16:<br />
+loss:  - accuracy:  - val_loss:  - val_accuracy: 
+VGG19:<br />
+loss:  - accuracy:  - val_loss:  - val_accuracy: 
+ResNet50:<br />
+loss:  - accuracy:  - val_loss:  - val_accuracy: 
+ResNet101:<br />
+loss:  - accuracy:  - val_loss:  - val_accuracy: 
