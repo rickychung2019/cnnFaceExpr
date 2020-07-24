@@ -49,7 +49,7 @@ def vgg16():
       classes=7,
     )
     model.compile(
-      optimizer='adam',
+      optimizer='sgd',
       loss='categorical_crossentropy',
       metrics=['accuracy'],
     )
@@ -63,7 +63,7 @@ def vgg19():
       classes=7,
     )
     model.compile(
-      optimizer='adam',
+      optimizer='sgd',
       loss='categorical_crossentropy',
       metrics=['accuracy'],
     )
