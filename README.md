@@ -35,7 +35,7 @@ The Facial Expression Recognition Challenge did not provide validation set. Thus
   ResNet50: optimizer = self_adam<br />
   ResNet101: optimizer = self_adam<br />
  ##########################################<br />
- Discover that the models are overfitted again
+ Discover that the models are overfitted again<br />
    **Fourth Attempt:<br />**
   self_adam = tf.keras.optimizers.Adam(learning_rate = 0.00025)<br />
   self_sgd = tf.keras.optimizers.SGD(learning_rate = 0.0025)<br />
