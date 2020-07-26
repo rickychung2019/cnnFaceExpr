@@ -26,20 +26,16 @@ ResNet50: optimizer = "adam"<br />
 ResNet101: optimizer = "adam"<br />
 ##########################################<br />
 Discover that the models are overfitted after 100 epochs (loss significantly smaller than val_loss). Thus define all optimizer myself<br />
-
+Third Attempt:<br />
+self_adam = tf.keras.optimizers.Adam(learning_rate = 0.0005)<br />
+self_sgd = tf.keras.optimizers.SGD(learning_rate = 0.005)<br />
+Self-defined: optimizer = self_adam<br />
+VGG16: optimizer = self_sgd<br />
+VGG19: optimizer = self_sgd<br />
+ResNet50: optimizer = self_adam<br />
+ResNet101: optimizer = self_adam<br />
 Step4: Training<br />
 Second Attempt:<br />
-After 50th epochs, batch_size=32:<br />
-Self-defined:<br />
-loss: 0.7749 - accuracy: 0.7031 - val_loss: 12.1171 - val_accuracy: 0.2766<br />
-VGG16:<br />
-loss: 0.0216 - accuracy: 0.9921 - val_loss: 2.8355 - val_accuracy: 0.5870<br />
-VGG19:<br />
-loss: 0.0361 - accuracy: 0.9876 - val_loss: 3.2098 - val_accuracy: 0.5291<br />
-ResNet50:<br />
-loss: 0.0652 - accuracy: 0.9767 - val_loss: 2.6912 - val_accuracy: 0.5652<br />
-ResNet101:<br />
-loss: 0.1422 - accuracy: 0.9525 - val_loss: 2.6376 - val_accuracy: 0.5487<br />
 After 100th epochs, batch_size=32:<br />
 Self-defined:<br />
 loss: 0.6586 - accuracy: 0.7649 - val_loss: 27.7895 - val_accuracy: 0.2796<br />
