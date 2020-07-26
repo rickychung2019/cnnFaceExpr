@@ -10,13 +10,25 @@ Step2: Defining Training Set and Validation Set<br />
 The Facial Expression Recognition Challenge did not provide validation set. Thus, I will split icml_face_data.csv into training set and validation set. Ratio=3:1.
 
 Step3: Defining Models<br />
-Self-defined
-VGG16
-VGG19
-ResNet50
-ResNet101
+First Attempt:<br />
+Self-defined: optimizer = "adam"<br />
+VGG16: optimizer = "adam"<br />
+VGG19: optimizer = "adam"<br />
+ResNet50: optimizer = "adam"<br />
+ResNet101: optimizer = "adam"<br />
+##########################################<br />
+Discover that VGG will not work with "adam" (no improvement during training). Thus change to "sgd"<br />
+Second Attempt:<br />
+Self-defined: optimizer = "adam"<br />
+VGG16: optimizer = "sgd"<br />
+VGG19: optimizer = "sgd"<br />
+ResNet50: optimizer = "adam"<br />
+ResNet101: optimizer = "adam"<br />
+##########################################<br />
+Discover that the models are overfitted after 100 epochs (loss significantly smaller than val_loss). Thus define all optimizer myself<br />
 
 Step4: Training<br />
+Second Attempt:<br />
 After 50th epochs, batch_size=32:<br />
 Self-defined:<br />
 loss: 0.7749 - accuracy: 0.7031 - val_loss: 12.1171 - val_accuracy: 0.2766<br />
@@ -28,7 +40,6 @@ ResNet50:<br />
 loss: 0.0652 - accuracy: 0.9767 - val_loss: 2.6912 - val_accuracy: 0.5652<br />
 ResNet101:<br />
 loss: 0.1422 - accuracy: 0.9525 - val_loss: 2.6376 - val_accuracy: 0.5487<br />
-
 After 100th epochs, batch_size=32:<br />
 Self-defined:<br />
 loss: 0.6586 - accuracy: 0.7649 - val_loss: 27.7895 - val_accuracy: 0.2796<br />
@@ -40,3 +51,5 @@ ResNet50:<br />
 loss: 0.0410 - accuracy: 0.9847 - val_loss: 3.1054 - val_accuracy: 0.5672<br />
 ResNet101:<br />
 loss: 0.0243 - accuracy: 0.9915 - val_loss: 3.3740 - val_accuracy: 0.5281<br />
+
+
