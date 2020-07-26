@@ -25,9 +25,9 @@ loss: 0.0216 - accuracy: 0.9921 - val_loss: 2.8355 - val_accuracy: 0.5870<br />
 VGG19:<br />
 loss: 0.0361 - accuracy: 0.9876 - val_loss: 3.2098 - val_accuracy: 0.5291<br />
 ResNet50:<br />
-loss:  - accuracy:  - val_loss:  - val_accuracy: <br />
+loss: 0.0652 - accuracy: 0.9767 - val_loss: 2.6912 - val_accuracy: 0.5652<br />
 ResNet101:<br />
-loss:  - accuracy:  - val_loss:  - val_accuracy: <br />
+loss: 0.1422 - accuracy: 0.9525 - val_loss: 2.6376 - val_accuracy: 0.5487<br />
 
 After 100th epochs, batch_size=32:<br />
 Self-defined:<br />
@@ -37,6 +37,6 @@ loss: 0.0033 - accuracy: 0.9978 - val_loss: 4.0657 - val_accuracy: 0.5998<br />
 VGG19:<br />
 loss: 0.0049 - accuracy: 0.9971 - val_loss: 3.5715 - val_accuracy: 0.5941<br />
 ResNet50:<br />
-loss:  - accuracy:  - val_loss:  - val_accuracy: <br />
+loss: 0.0410 - accuracy: 0.9847 - val_loss: 3.1054 - val_accuracy: 0.5672<br />
 ResNet101:<br />
-loss:  - accuracy:  - val_loss:  - val_accuracy: <br />
+loss: 0.0243 - accuracy: 0.9915 - val_loss: 3.3740 - val_accuracy: 0.5281<br />
