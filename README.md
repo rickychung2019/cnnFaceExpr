@@ -10,30 +10,30 @@ The pixels of each image given by the dataset are just a series of string separa
 The Facial Expression Recognition Challenge did not provide validation set. Thus, I will split icml_face_data.csv into training set and validation set. Ratio=3:1.
 
 **Step3: Defining Models<br />**
-**First Attempt:<br />**
-Self-defined: optimizer = "adam"<br />
-VGG16: optimizer = "adam"<br />
-VGG19: optimizer = "adam"<br />
-ResNet50: optimizer = "adam"<br />
-ResNet101: optimizer = "adam"<br />
-##########################################<br />
-Discover that VGG will not work with "adam" (no improvement during training). Thus change to "sgd"<br />
-**Second Attempt:<br />**
-Self-defined: optimizer = "adam"<br />
-VGG16: optimizer = "sgd"<br />
-VGG19: optimizer = "sgd"<br />
-ResNet50: optimizer = "adam"<br />
-ResNet101: optimizer = "adam"<br />
-##########################################<br />
-Discover that the models are overfitted after 100 epochs (loss significantly smaller than val_loss). Thus define all optimizer myself<br />
-**Third Attempt:<br />**
-self_adam = tf.keras.optimizers.Adam(learning_rate = 0.0005)<br />
-self_sgd = tf.keras.optimizers.SGD(learning_rate = 0.005)<br />
-Self-defined: optimizer = self_adam<br />
-VGG16: optimizer = self_sgd<br />
-VGG19: optimizer = self_sgd<br />
-ResNet50: optimizer = self_adam<br />
-ResNet101: optimizer = self_adam<br />
+  **First Attempt:<br />**
+  Self-defined: optimizer = "adam"<br />
+  VGG16: optimizer = "adam"<br />
+  VGG19: optimizer = "adam"<br />
+  ResNet50: optimizer = "adam"<br />
+  ResNet101: optimizer = "adam"<br />
+  ##########################################<br />
+  Discover that VGG will not work with "adam" (no improvement during training). Thus change to "sgd"<br />
+  **Second Attempt:<br />**
+  Self-defined: optimizer = "adam"<br />
+  VGG16: optimizer = "sgd"<br />
+  VGG19: optimizer = "sgd"<br />
+  ResNet50: optimizer = "adam"<br />
+  ResNet101: optimizer = "adam"<br />
+  ##########################################<br />
+  Discover that the models are overfitted after 100 epochs (loss significantly smaller than val_loss). Thus define all optimizer myself<br />
+  **Third Attempt:<br />**
+  self_adam = tf.keras.optimizers.Adam(learning_rate = 0.0005)<br />
+  self_sgd = tf.keras.optimizers.SGD(learning_rate = 0.005)<br />
+  Self-defined: optimizer = self_adam<br />
+  VGG16: optimizer = self_sgd<br />
+  VGG19: optimizer = self_sgd<br />
+  ResNet50: optimizer = self_adam<br />
+  ResNet101: optimizer = self_adam<br />
 **Step4: Training<br />**
 **Second Attempt (the same as first attempt except VGG models):<br />**
 After 100th epochs, batch_size=32:<br />
