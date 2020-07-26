@@ -50,9 +50,9 @@ if args.new==True:
     elif args.model=="VGG19":
         model=model.vgg19()
     elif args.model=="ResNet50":
-        model=model.ResNet50()
+        model=model.resnet50()
     elif args.model=="ResNet101":
-        model=model.ResNet101()
+        model=model.resnet101()
 else:
     model = tf.keras.models.load_model("./"+str(args.model)+".h5")
 
