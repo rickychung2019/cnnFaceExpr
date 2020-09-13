@@ -1,5 +1,6 @@
 # cnnFaceExpr
-Learning purpose deep learning project. CNN will be used to perform facial expression recognition. Aim to familiarise myself with Keras, Numpy, Matplotlib and different nerual architectures.<br />
+Learning purpose deep learning project. CNNs are used to perform facial expression recognition. Aim to familiarise myself with Keras, Numpy, Matplotlib and different nerual architectures.<br />
+
 Please make sure the filename of the dataset in data.py is correct and check the usage by `python train.py -h`<br />
 
 Dataset used: icml_face_data.csv (Facial Expression Recognition Challenge https://www.kaggle.com/debanga/facial-expression-recognition-challenge?select=test.csv )<br />
