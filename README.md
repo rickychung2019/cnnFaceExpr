@@ -1,22 +1,22 @@
 # cnnFaceExpr
 Learning purpose CNN models. Aim to familiarise myself with Keras, Numpy, Matplotlib and to compare the performance of different nerual architectures.
-
+<br />
 Dataset used: icml_face_data.csv (Facial Expression Recognition Challenge https://www.kaggle.com/debanga/facial-expression-recognition-challenge?select=test.csv )<br />
-
+<br />
 **Step1: Massaging the Dataset<br />**
 The pixels of each image given by the dataset are just a series of string separated by whitespace. Have to turn it into 48x48 numpy.ndarray with dtype=float.
-
+<br />
 **Step2: Defining Training Set and Validation Set<br />**
 The Facial Expression Recognition Challenge did not provide validation set. Thus, I will split icml_face_data.csv into training set and validation set. Ratio=3:1.
-
-**Step3: Defining Models<br />**
+<br />
+**Step3: Defining Models ( model.py ) <br />**
   **First Attempt:<br />**
   Self-defined: optimizer = "adam"<br />
   VGG16: optimizer = "adam"<br />
   VGG19: optimizer = "adam"<br />
   ResNet50: optimizer = "adam"<br />
   ResNet101: optimizer = "adam"<br />
-  ##########################################<br />
+<br />
   Discover that VGG will not work with "adam" (no improvement during training). Thus change to "sgd"<br />
   **Second Attempt:<br />**
   Self-defined: optimizer = "adam"<br />
@@ -24,7 +24,7 @@ The Facial Expression Recognition Challenge did not provide validation set. Thus
   VGG19: optimizer = "sgd"<br />
   ResNet50: optimizer = "adam"<br />
   ResNet101: optimizer = "adam"<br />
-  ##########################################<br />
+<br />
   Discover that the models are overfitted after 100 epochs (loss significantly smaller than val_loss). Thus define all optimizer myself<br />
   **Third Attempt:<br />**
   self_adam = tf.keras.optimizers.Adam(learning_rate = 0.0005)<br />
@@ -34,7 +34,7 @@ The Facial Expression Recognition Challenge did not provide validation set. Thus
   VGG19: optimizer = self_sgd<br />
   ResNet50: optimizer = self_adam<br />
   ResNet101: optimizer = self_adam<br />
- ##########################################<br />
+<br />
 
 **Step4: Training<br />**
 **Second Attempt (the same as first attempt except VGG models):<br />**
@@ -49,6 +49,7 @@ ResNet50:<br />
 loss: 0.0410 - accuracy: 0.9847 - val_loss: 3.1054 - val_accuracy: 0.5672<br />
 ResNet101:<br />
 loss: 0.0243 - accuracy: 0.9915 - val_loss: 3.3740 - val_accuracy: 0.5281<br />
+<br />
 **Third Attempt:**<br />
 After 50th epochs, batch_size=32:<br />
 Self-defined:<br />
