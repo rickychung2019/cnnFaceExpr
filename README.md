@@ -3,10 +3,10 @@ Learning purpose CNN models. Aim to familiarise myself with Keras, Numpy, Matplo
 
 Dataset used: icml_face_data.csv (Facial Expression Recognition Challenge https://www.kaggle.com/debanga/facial-expression-recognition-challenge?select=test.csv )<br />
 
-**Step1: Massaging the Dataset<br />**
+**Step1: Massaging the Dataset ( data.py )<br />**
 The pixels of each image given by the dataset are just a series of string separated by whitespace. Have to turn it into 48x48 numpy.ndarray with dtype=float.<br />
 
-**Step2: Defining Training Set and Validation Set<br />**
+**Step2: Defining Training Set and Validation Set ( data.py )<br />**
 The Facial Expression Recognition Challenge did not provide validation set. Thus, I will split icml_face_data.csv into training set and validation set. Ratio=3:1.<br />
 
 **Step3: Defining Models ( model.py ) <br />**
@@ -36,7 +36,7 @@ The Facial Expression Recognition Challenge did not provide validation set. Thus
   ResNet101: optimizer = self_adam<br />
 
 
-**Step4: Training<br />**
+**Step4: Training ( train.py ) <br />**
 **Second Attempt (the same as first attempt except VGG models):<br />**
 After 100th epochs, batch_size=32:<br />
 Self-defined:<br />
