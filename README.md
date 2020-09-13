@@ -35,15 +35,7 @@ The Facial Expression Recognition Challenge did not provide validation set. Thus
   ResNet50: optimizer = self_adam<br />
   ResNet101: optimizer = self_adam<br />
  ##########################################<br />
- Discover that the models are overfitted again<br />
-   **Fourth Attempt:<br />**
-  self_adam = tf.keras.optimizers.Adam(learning_rate = 0.00025)<br />
-  self_sgd = tf.keras.optimizers.SGD(learning_rate = 0.0025)<br />
-  Self-defined: optimizer = self_adam<br />
-  VGG16: optimizer = self_sgd<br />
-  VGG19: optimizer = self_sgd<br />
-  ResNet50: optimizer = self_adam<br />
-  ResNet101: optimizer = self_adam<br />
+
 **Step4: Training<br />**
 **Second Attempt (the same as first attempt except VGG models):<br />**
 After 100th epochs, batch_size=32:<br />
@@ -69,5 +61,6 @@ ResNet50:<br />
 loss: 0.0840 - accuracy: 0.9715 - val_loss: 2.6732 - val_accuracy: 0.5370<br />
 ResNet101:<br />
 loss: 0.0771 - accuracy: 0.9756 - val_loss: 2.5519 - val_accuracy: 0.5688<br />
+
 
 
